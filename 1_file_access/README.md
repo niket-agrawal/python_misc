@@ -1,4 +1,4 @@
-### [Python] - To access all files inside any particular directory 
+### To access all files inside any particular directory 
 **(Dependencies - os)**
 This code is mainly written for access of specific extension file type/s (.jpg in this case) inside any specific folder. The folder path must be supplied in `sub_path` variable, and list of folders to be accessed is to be supplied manually in `folders` variable.
 
