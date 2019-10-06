@@ -78,8 +78,13 @@ niks@home\Niks_projects\Project1 > venv\Scripts\activate.bat
 Haha are you kidding, do `pip list` and `where python` and go ahead. Make something awesome.
 
 To save your environment dependencies for distribution in the form of `requirements.txt`, use this command.
+
 ```bash
 (venv) niks@home\Niks_projects\Project1 > pip freeze > requirements.txt
+```
+After distribution, if you want to install all dependencies on host, use this command. (After navigating the directory for `requirements.txt` file.
+```bash
+(new_host_venv) host@home > pip install -r requirements.txt
 ```
 
 ### Step 4 - Deactivate your Environment
@@ -100,12 +105,23 @@ niks@home\Niks_projects\Project1 > rmdir venv /s
 Are you sure (Y/N)? y
 ```
 
+## Environment with access to Global Packages
+
+General usage: `python -m venv new_venv --system-site-packages`, for creating virtual environment that has access to global version of Python packages.
+
+Local packages installed on this virtual environment will not affect any package globally. To see the list of local packages inside any environment, use `pip list --local`.
+
+## Nuance: Way 1 v/s Way 2
+
+>Way 1 is preferred generally when your `environments` are separately stored from the `projects` directory. `You can activate whichever environment you want to work with your project.` That's why, I called it "Environment Oriented".
+
+>Way 2 is used when your `projects` directory have its own `venv` and `requirements.txt` for cross-platform distribution. Here `environment` is stored within your `project` directory. `You can navigate to your project folder and activate its venv before working on that particular project.` That's why, I called it "Project Oriented".
 
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
+## References
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+- [Corey Schafer Tutorial](https://www.youtube.com/watch?v=APOPm01BVrk)
+- https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf
+- https://pandao.github.io/editor.md/en.html
+- https://www.makeareadme.com
