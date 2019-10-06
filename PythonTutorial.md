@@ -131,3 +131,4 @@ Local packages installed on this virtual environment will not affect any package
 - https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf
 - https://pandao.github.io/editor.md/en.html
 - https://www.makeareadme.com
+- https://jbt.github.io/markdown-editor/
