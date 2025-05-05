@@ -69,6 +69,15 @@ for e.g.
   Activating project at `C:\programs_pkgs\julia\env0_defaultJulia`
 ```
 
+If you want to activate the environment in different directory
+```bash
+> cd what/ever/directory/you/want/to/go
+> julia
+julia> import Pkg;
+julia> Pkg.activate("C:\\programs_pkgs\\julia\\env0_defaultJulia")
+julia> Pkg.status()
+```
+
 ### Step 3 - Actual Use
 
 Haha are you kidding, do `status -m` to see recursive dependencies of all pakages. Make something awesome.
